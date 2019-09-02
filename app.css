@@ -1,16 +1,28 @@
 h1 {
   color: #3c3c3c;
   text-align: left;
+  margin-left: 10px;
 }
 
 h2 {
   color: #3c3c3c;
   text-align: left;
+  margin-left: 10px;
+  margin-right: 25px
 }
 
-h2 {
+p {
   color: #3c3c3c;
   text-align: left;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+h3 {
+  color: #3c3c3c;
+  text-align: left;
+  margin-left: 25px;
+  margin-right: 25px
 }
 
 /* horizontal navigation bar */
@@ -29,8 +41,8 @@ li {
 li a {
   display: block;
   color: #3399ff;
-  text-align: center;
-  padding: 14px 16px;
+  text-align: left;
+  padding: 10px 15px;
   text-decoration: none;
 }
 
@@ -47,11 +59,12 @@ body {
 /* max-width */
 div.ex2 {
   max-width: 700px;
-  margin: auto;
+  margin: 50px;
   border: 1px solid #3c3c3c;
-  background-color: lightgrey;
-  padding-left: 12px;
-  padding-right: 12px;
+  background-color: white;
+  color: white;
+  /* padding-left: 2px;
+  padding-right: 12px; */
 }
 
 img {
@@ -69,7 +82,7 @@ img {
 }
 
 .center {
-  display: block;
+  /* display: block; */
   margin-left: auto;
   margin-right: auto;
   width: 50%;
@@ -77,4 +90,9 @@ img {
 
 footer {
   text-align: center;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
 }
