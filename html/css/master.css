@@ -182,7 +182,7 @@ section.resume-section .resume-item .resume-date {
   background-image: url(https://i.imgur.com/Ssd2V34.jpg?1);
   align-items: center;
   width: auto;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
 }
 
 .text-primary {
