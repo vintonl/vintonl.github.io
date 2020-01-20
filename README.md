@@ -8,4 +8,4 @@
 - jQuery
 - JavaScript
 - Atom
-- Visial Studio Code
+- Visual Studio Code
