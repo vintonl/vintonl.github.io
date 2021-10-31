@@ -178,13 +178,6 @@ section.resume-section .resume-item .resume-date {
   }
 }
 
-.bg-primary {
-  background-image: url(https://i.imgur.com/Ssd2V34.jpg?1);
-  align-items: center;
-  width: auto;
-  background-repeat: no-repeat;
-}
-
 .text-primary {
   color: #0066ff !important;
 }
