@@ -2,10 +2,10 @@
   "use strict"; // Start of use strict
 
   function smoothScroll(event) {
-    var pathname = location.pathname.replace(/^\//, '');
-    var hostname = location.hostname;
-    var targetHash = this.hash;
-    var target = $(targetHash);
+    const pathname = location.pathname.replace(/^\//, '');
+    const hostname = location.hostname;
+    const targetHash = this.hash;
+    let target = $(targetHash);
 
     if (pathname === this.pathname.replace(/^\//, '') && hostname === this.hostname) {
       target = target.length ? target : $('[name=' + targetHash.slice(1) + ']');
