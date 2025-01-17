@@ -1,28 +1,40 @@
 (function($) {
   "use strict"; // Start of use strict
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+  function smoothScroll(event) {
+    var pathname = location.pathname.replace(/^\//, '');
+    var hostname = location.hostname;
+    var targetHash = this.hash;
+    var target = $(targetHash);
+
+    if (pathname === this.pathname.replace(/^\//, '') && hostname === this.hostname) {
+      target = target.length ? target : $('[name=' + targetHash.slice(1) + ']');
       if (target.length) {
         $('html, body').animate({
-          scrollTop: (target.offset().top)
+          scrollTop: target.offset().top
         }, 1000, "easeInOutExpo");
-        return false;
+        event.preventDefault();
       }
     }
-  });
+  }
+
+  function closeResponsiveMenu() {
+    $('.navbar-collapse').collapse('hide');
+  }
+
+  function activateScrollSpy() {
+    $('body').scrollspy({
+      target: '#sideNav'
+    });
+  }
+
+  // Smooth scrolling using jQuery easing
+  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(smoothScroll);
 
   // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
+  $('.js-scroll-trigger').click(closeResponsiveMenu);
 
   // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#sideNav'
-  });
+  activateScrollSpy();
 
 })(jQuery); // End of use strict
